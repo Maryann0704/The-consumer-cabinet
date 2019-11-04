@@ -1,6 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html>
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,9 +11,7 @@
 <nav class="navbar navbar-light bg-light">
 <ul class="nav">
   <li class="nav-item">
-    <a
-<%!
-class="nav-link active" href="${pageContext.request.contextPath}/">Home</a>
+    <a class="nav-link active" href="${pageContext.request.contextPath}/">Home</a>
   </li>
   <sec:authorize access="!isAuthenticated()">
     <li class="nav-item">

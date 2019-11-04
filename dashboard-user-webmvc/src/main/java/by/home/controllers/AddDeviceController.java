@@ -39,7 +39,7 @@ public class AddDeviceController {
         log.info("Call submitAddDeviceForm: " + device);
         log.info("Principal: " + appUser.getName());
 
-        device.setUserId(appUser.getId());
+        device.setAppUser(appUser);
         deviceListService.addDevice(device);
         return "myDevices";
     }

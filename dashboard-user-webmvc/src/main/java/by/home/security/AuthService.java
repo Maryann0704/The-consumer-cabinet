@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @Service
 public class AuthService implements UserDetailsService {
 
-    private static Logger log = Logger.getLogger("AuthService");
+    private static Logger log = Logger.getLogger(AuthService.class.getName());
 
     @Autowired
     private AppUserRepository userRepository;
@@ -31,7 +31,7 @@ public class AuthService implements UserDetailsService {
         }
         User user = new User(appUser.getEmail(),
                 appUser.getPassword(),
-                appUser.getRoles().stream()
+                appUser.getAppRoles().stream()
                         .map(appRole -> new SimpleGrantedAuthority("ROLE_"+
                                 appRole.getName().name()))
                         .collect(Collectors.toSet()));

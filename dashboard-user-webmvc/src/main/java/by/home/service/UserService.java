@@ -44,7 +44,7 @@ public class UserService {
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         log.info("Encoded password: " + encodedPassword);
         user.setPassword(encodedPassword);
-        user.setRoles(Set.of(userRole));
+        user.setAppRoles(Set.of(userRole));
         userRepository.save(user);
         return true;
     }

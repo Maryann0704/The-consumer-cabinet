@@ -5,7 +5,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.logging.Logger;
 
 @Repository
@@ -31,14 +30,6 @@ public class AppUserRepository {
             log.warning(e.getMessage());
             return null;
         }
-    }
-
-    public List findUserByName(String name, int count) {
-        return sessionFactory.getCurrentSession()
-                .createQuery("from AppUser where name like :param2", AppUser.class)
-                .setParameter("param2", name)
-                .setMaxResults(count)
-                .list();
     }
 
 }

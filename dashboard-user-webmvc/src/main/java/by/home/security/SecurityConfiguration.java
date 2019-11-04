@@ -10,20 +10,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
-@ComponentScan("by.pvt")
+@ComponentScan("by.home")
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-    /*@Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user").password("{noop}password").roles("USER").and()
-                .withUser("admin").password("{noop}password").roles("USER", "ADMIN");
-    }*/
 
     @Override
     public void configure(WebSecurity web) {
@@ -32,10 +26,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
         http.authorizeRequests()
-                .antMatchers(HttpMethod.GET,"/add-product")
+                .antMatchers(HttpMethod.GET,"/my-devices")
                 .hasRole("USER")
-                .antMatchers(HttpMethod.POST, "/add-product")
+                .antMatchers(HttpMethod.POST, "/add-device")
                 .hasRole("USER")
                 .and()
                 .formLogin()

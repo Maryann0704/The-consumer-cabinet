@@ -52,9 +52,9 @@
         <sql>
             CREATE TABLE IF NOT EXISTS `measure`.`device` (
             `id` INT NOT NULL,
-            `type_id` INT NOT NULL,
-            `location_id` INT NOT NULL,
-            `appuser_id` INT NOT NULL,
+            `type_id` INT NOT NULL DEFAULT 0,
+            `location_id` INT NOT NULL DEFAULT 0,
+            `appuser_id` INT NOT NULL DEFAULT 0,
             PRIMARY KEY (`id`),
             INDEX `fk_device_type1_idx` (`type_id` ASC) VISIBLE,
             INDEX `fk_device_location1_idx` (`location_id` ASC) VISIBLE,

@@ -1,20 +1,22 @@
 package by.home.pojo;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
-public class AppUser {
+public class AppUser implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
@@ -22,14 +24,10 @@ public class AppUser {
     private String password;
 
     @ManyToMany
-    private Set<AppRole> roles;
+    private Set<AppRole> appRoles;
 
-    @OneToMany
-    private List<Device> deviceList;
-
-    public AppUser(String name, String email, String password) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "appUser")
+    private List<Device> devices;
 }

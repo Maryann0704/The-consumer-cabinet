@@ -27,7 +27,7 @@ public class UserRegistrationController {
     public String registerForm(@ModelAttribute AppUser user,
                                BindingResult bindingResult) {
         if (userService.saveUser(user)) {
-            return "login";
+            return "redirect:/login";
         } else
             return "registration";
     }
