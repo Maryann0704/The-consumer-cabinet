@@ -4,68 +4,6 @@
   "scenarios": [
     {
       "className": "by.home.controllers.SearchControllerTest",
-      "testMethodName": "searchWithParam",
-      "description": "Search with param",
-      "tagIds": [],
-      "explicitParameters": [],
-      "derivedParameters": [],
-      "casesAsTable": false,
-      "scenarioCases": [
-        {
-          "caseNr": 1,
-          "steps": [],
-          "explicitArguments": [],
-          "derivedArguments": [],
-          "status": "FAILED",
-          "success": false,
-          "errorMessage": "org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [test-data.sql]: INSERT INTO `measure_test`.`device`(`id`,`location`,`type`,`userId`) VALUES (1,\u0027kitchen\u0027,\u0027gas meter\u0027, 1); nested exception is java.sql.SQLException: Incorrect integer value: \u0027kitchen\u0027 for column \u0027location\u0027 at row 1",
-          "stackTrace": [
-            "org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)",
-            "org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)",
-            "org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)",
-            "org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)",
-            "org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$4(SqlScriptsTestExecutionListener.java:263)",
-            "org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68)",
-            "org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)",
-            "org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67)",
-            "org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:263)",
-            "org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$0(SqlScriptsTestExecutionListener.java:185)",
-            "java.base/java.lang.Iterable.forEach(Iterable.java:75)",
-            "org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:185)",
-            "org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:144)",
-            "org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.beforeTestMethod(SqlScriptsTestExecutionListener.java:117)",
-            "org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:289)",
-            "org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)",
-            "org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)",
-            "com.tngtech.jgiven.junit.JGivenMethodRule$1.evaluate(JGivenMethodRule.java:73)",
-            "org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)",
-            "org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)",
-            "org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)",
-            "org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)",
-            "org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)",
-            "org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)",
-            "org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)",
-            "org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)",
-            "org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)",
-            "org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)",
-            "org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)",
-            "org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)",
-            "org.junit.rules.RunRules.evaluate(RunRules.java:20)",
-            "org.junit.runners.ParentRunner.run(ParentRunner.java:363)",
-            "org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)",
-            "org.junit.runner.JUnitCore.run(JUnitCore.java:137)",
-            "com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)",
-            "com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)",
-            "com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)",
-            "com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)"
-          ],
-          "durationInNanos": 182941200
-        }
-      ],
-      "durationInNanos": 182941200
-    },
-    {
-      "className": "by.home.controllers.SearchControllerTest",
       "testMethodName": "search",
       "description": "Search",
       "tagIds": [],
@@ -95,7 +33,7 @@
                 }
               ],
               "status": "PASSED",
-              "durationInNanos": 13395700
+              "durationInNanos": 10862600
             },
             {
               "name": "execute search",
@@ -108,15 +46,15 @@
                   "value": "execute search"
                 },
                 {
-                  "value": "org.springframework.test.web.servlet.MockMvc@540212be",
+                  "value": "org.springframework.test.web.servlet.MockMvc@4fa8297b",
                   "argumentInfo": {
                     "argumentName": "mockMvc",
-                    "formattedValue": "org.springframework.test.web.servlet.MockMvc@540212be"
+                    "formattedValue": "org.springframework.test.web.servlet.MockMvc@4fa8297b"
                   }
                 }
               ],
-              "status": "FAILED",
-              "durationInNanos": 350068900
+              "status": "PASSED",
+              "durationInNanos": 429072900
             },
             {
               "name": "result size is",
@@ -136,68 +74,19 @@
                   }
                 }
               ],
-              "status": "SKIPPED",
-              "durationInNanos": 0
+              "status": "PASSED",
+              "durationInNanos": 1305000
             }
           ],
           "explicitArguments": [],
           "derivedArguments": [],
-          "status": "FAILED",
-          "success": false,
-          "errorMessage": "org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Enum (java.lang.String and java.lang.Enum are in module java.base of loader \u0027bootstrap\u0027)",
-          "stackTrace": [
-            "org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)",
-            "org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)",
-            "javax.servlet.http.HttpServlet.service(HttpServlet.java:645)",
-            "org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)",
-            "org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)",
-            "javax.servlet.http.HttpServlet.service(HttpServlet.java:750)",
-            "org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)",
-            "org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)",
-            "org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183)",
-            "by.home.controllers.SearchControllerTest$When.executeSearch(SearchControllerTest.java:59)",
-            "by.home.controllers.SearchControllerTest$When$ByteBuddy$AUC0v5k2.executeSearch$accessor$fVEuPttY(Unknown Source)",
-            "by.home.controllers.SearchControllerTest$When$ByteBuddy$AUC0v5k2$auxiliary$0N200E2L.call(Unknown Source)",
-            "by.home.controllers.SearchControllerTest$When$ByteBuddy$AUC0v5k2.executeSearch(Unknown Source)",
-            "by.home.controllers.SearchControllerTest.search(SearchControllerTest.java:93)",
-            "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
-            "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
-            "java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
-            "org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)",
-            "org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)",
-            "org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)",
-            "org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)",
-            "org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)",
-            "org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)",
-            "org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)",
-            "org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)",
-            "org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)",
-            "com.tngtech.jgiven.junit.JGivenMethodRule$1.evaluate(JGivenMethodRule.java:73)",
-            "org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)",
-            "org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)",
-            "org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)",
-            "org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)",
-            "org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)",
-            "org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)",
-            "org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)",
-            "org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)",
-            "org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)",
-            "org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)",
-            "org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)",
-            "org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)",
-            "org.junit.rules.RunRules.evaluate(RunRules.java:20)",
-            "org.junit.runners.ParentRunner.run(ParentRunner.java:363)",
-            "org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)",
-            "org.junit.runner.JUnitCore.run(JUnitCore.java:137)",
-            "com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)",
-            "com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)",
-            "com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)",
-            "com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)"
-          ],
-          "durationInNanos": 410519400
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 497926500
         }
       ],
-      "durationInNanos": 410519400
+      "durationInNanos": 497926500,
+      "executionStatus": "SUCCESS"
     }
   ],
   "tagMap": {}

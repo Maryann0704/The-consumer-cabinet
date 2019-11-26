@@ -12,8 +12,8 @@ public class Helper {
 
 
     public static AppUser getAppUser() {
-        String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return userRepository.findUserByEmail(email);
+        AppUser user = (AppUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return userRepository.findUserByEmail(user.getEmail());
     }
 
 }

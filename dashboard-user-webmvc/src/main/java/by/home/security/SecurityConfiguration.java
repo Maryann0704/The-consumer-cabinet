@@ -30,14 +30,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.GET,"/my-devices")
                 .hasRole("USER")
-                .antMatchers(HttpMethod.POST, "/add-device")
-                .hasRole("USER")
+                .antMatchers(HttpMethod.POST, "/add-device*").permitAll()
                 .and()
                 .formLogin()
                 .and()
                 .csrf().disable();
     }
 
+    @Override
     @Bean
     public UserDetailsService userDetailsService() {
         return new AuthService();

@@ -11,7 +11,6 @@
     <modules>
         <module>dashboard-user-webmvc</module>
         <module>data-REST-service</module>
-        <module>measure-db-mysql</module>
     </modules>
 
 
